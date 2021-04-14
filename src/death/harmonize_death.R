@@ -69,12 +69,14 @@ harmonized_stmf <-
       factor(region_stmf,
              levels = cnst$region_codes$region_code_stmf,
              labels = cnst$region_codes$region_code_iso3166_2) %>%
-      as.character()
-  ) %>%
-  mutate(
-    id = GenerateRowID(region_iso = region_iso,
-                       sex = sex, age_start = age_start,
-                       year = year, week = week)
+      as.character(),
+    id =
+      GenerateRowID(region_iso = region_iso,
+                    sex = sex, age_start = age_start,
+                    year = year, week = week),
+    # ensure that deaths are integer via the mode of a
+    # Poisson distribution with rate "deaths"
+    deaths = floor(deaths) %>% as.integer()
   ) %>%
   select(id, deaths)
 

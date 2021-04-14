@@ -1,23 +1,19 @@
-# MOCY Mortality Cycles: Timeseries of weekly death counts and covariates by country, sex and age
+# MOCY Mortality Cycles: Timeseries of weekly death counts and covariates by country, sex, and age
 
-Jonas Schöley. Last updated: 2021-02-24
+Jonas Schöley. Last updated: 2021-04-14. Version: 2021W15.
 
 ![](cover.png)
 
-MOCY provides timeseries of weekly death counts stratified by country, sex and age along with useful co-variates such as personweeks exposure time, population weighted weekly temperature, and public holiday indicators.
+MOCY provides time series of weekly death counts stratified by country, sex, and age along with useful covariates such as person-weeks exposure time, population-weighted weekly temperature, and public holiday indicators.
 
-This repository contains the source files needed to compile the MOCY data base.
-
-The compiled MOCY data base is available at request from the author.
+This repository contains the source files needed to compile the MOCY database. The compiled data is hosted at [osf.io/k84rz](https://osf.io/k84rz/).
 
 ## Sources
 
-MOCY derives and harmonizes data from multiple data sources:
-
-Weekly death counts by country, year, sex and age:
+Weekly death counts by country, year, sex, and age:
   - sourced from HMD-STMF [1]
 
-Weekly person-weeks of exposure by country, year, sex and age:
+Weekly person-weeks of exposure by country, year, sex, and age:
   - calculated from interpolated annual January 1st population estimates sourced from HMD [2]
 
 Weekly public holidays by country and year:
@@ -47,8 +43,8 @@ Weekly population-weighted average temperature by country and year calculated fr
 ### strata
 
 - region_iso:
-  ISO 3166-1 alpha-2 country code when region is nation state;
-  ISO 3166-2 region code when region is subdivision of nation state
+  ISO 3166-1 alpha-2 country code when region is nation-state;
+  ISO 3166-2 region code when region is subdivision of nation-state
 - sex:
   Male and Female
 - age_start:
@@ -88,7 +84,5 @@ Weekly population-weighted average temperature by country and year calculated fr
   'none' if week does not feature a public holiday, otherwise name
   of holiday
 - temp_c_popwgt:
-  population weighted average temperature in given week and region
+  population-weighted average temperature in given week and region
   in degrees Celsius
-
-

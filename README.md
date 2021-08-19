@@ -1,6 +1,6 @@
 # MOCY Mortality Cycles: Timeseries of weekly death counts and covariates by country, sex, and age
 
-Jonas Schöley. Last updated: 2021-05-03. Version: 2021W18.
+Jonas Schöley. Last updated: 2021-08-19. Version: 2021W33.
 
 ![](cover.png)
 

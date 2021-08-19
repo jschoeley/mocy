@@ -8,7 +8,7 @@ credentials:
 skeleton:
   year:
     min: 2000
-    max: 2021
+    max: 2022
   week:
     min: 1
     max: 52

@@ -1,6 +1,6 @@
 # MOCY Mortality Cycles: Timeseries of weekly death counts and covariates by country, sex, and age
 
-Jonas Schöley. Last updated: 2021-08-19. Version: 2021W33.
+Jonas Schöley. Last updated: 2021-11-19. Version: 2021W46.
 
 ![](cover.png)
 
@@ -11,18 +11,22 @@ This repository contains the source files needed to compile the MOCY database. T
 ## Sources
 
 Weekly death counts by country, year, sex, and age:
-  - sourced from HMD-STMF [1]
+
+- sourced from HMD-STMF [1]
 
 Weekly person-weeks of exposure by country, year, sex, and age:
-  - calculated from interpolated annual January 1st population estimates sourced from HMD [2]
+
+- calculated from interpolated annual January 1st population estimates sourced from HMD [2]
 
 Weekly public holidays by country and year:
-  - derived using <https://github.com/nager/Nager.Date>
+
+- derived using <https://github.com/nager/Nager.Date>
 
 Weekly population-weighted average temperature by country and year calculated from:
-  - Global gridded population 2010 [3]
-  - Daily global gridded temperature [4]
-  - Global national grid embedded in [3]
+
+- Global gridded population 2010 [3]
+- Daily global gridded temperature [4]
+- Global national grid embedded in [3]
 
 [1]: HMD-STMF https://www.mortality.org/Public/STMF/Outputs/stmf.csv
 

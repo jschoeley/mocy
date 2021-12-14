@@ -49,5 +49,5 @@ write_csv(mocy, file = glue('{wd}/out/mocy.csv'))
 
 cat(crayon::blue('Save final data set as .xlsx\n'))
 write.xlsx(mocy, glue('{wd}/out/mocy.xlsx'),
-           keepNA = TRUE, na.string = '.',
+           keepNA = TRUE, na.string = '.', overwrite = TRUE,
            firstRow = TRUE, firstCol = TRUE)

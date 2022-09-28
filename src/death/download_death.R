@@ -15,7 +15,7 @@ wd <- here()
 
 stmf <-
   read_csv(
-    'https://www.mortality.org/Public/STMF/Outputs/stmf.csv',
+    'https://www.mortality.org/File/GetDocument/Public/STMF/Outputs/stmf.csv',
     col_types = "ciicddddddddddddlll",
     skip = 2, col_names = TRUE
   )

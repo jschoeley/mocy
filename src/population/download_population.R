@@ -26,13 +26,21 @@ hmd_codes_for_download <- region_meta$region_code_hmd
 hmd_popjan1st <-
   map(hmd_codes_for_download, ~{
     cat(crayon::blue('Download population counts for ', ., '\n'))
-    single_country <- readHMDweb(
-      ., 'Population',
-      username = config$credentials$hmd$user,
-      password = config$credentials$hmd$pswd,
-      fixup = TRUE
+
+    path <- paste0("https://former.mortality.org/hmd/", ., 
+                   "/STATS/", 'Population.txt')
+    TEXT <- httr::GET(
+      path, httr::authenticate(config$credentials$hmd$user,
+                               config$credentials$hmd$pswd), 
+      httr::config(ssl_verifypeer = 0L)
     )
+    single_country <- read.table(
+      text = httr::content(TEXT, encoding = "UTF-8"), 
+      header = TRUE, skip = 2, na.strings = ".", as.is = TRUE
+    )
+    single_country <- HMDparse(single_country, filepath = 'Population.txt')
     single_country$region_hmd <- .
+    
     return(single_country)
   })
 

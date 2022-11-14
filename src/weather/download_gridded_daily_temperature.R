@@ -16,7 +16,7 @@ cnst <- within(cnst, {
   url =
     'ftp://ftp.cdc.noaa.gov/Datasets/cpc_global_temp/'
   # year range
-  years = 2000:2021
+  years = 2000:as.integer(format(Sys.time(), '%Y'))
   # daily minimum and maximum temperature files
   t_filenames =
     c(paste0('tmin.', years, '.nc'), paste0('tmax.', years, '.nc'))
